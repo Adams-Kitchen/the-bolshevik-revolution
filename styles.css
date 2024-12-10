@@ -22,16 +22,52 @@ html body {
     object-position: center 8%;
   }
 
-  .blurb {
+
+.blurb {
     padding: 20px;
-    border-radius: 10px;
-    margin-left: 150px;
-    margin-right:150px;
+    text-align: center;
+  }
+  
+.blurb h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+  
+.blurb-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    max-width: 800px;
+    margin: 0 auto; 
+  }
+  
+#lenin {
+    width: 60%; 
+    max-width: 400px; 
+    height: auto; 
+    margin-bottom: 20px; 
+  }
+  
+  
+p {
+    line-height: 1.6; 
+    font-size: 1.1em;
+    max-width: 900px; 
+    margin: 0 auto; 
+  }
+  
+
+@media (max-width: 768px) {
+    #lenin {
+      width: 80%; 
+    }
   }
 
-  .blurb h2 {
-    font-size: 2em;
-    margin-bottom: 0;
-    text-align: center;
-    text-decoration: underline;
+.video{
+    display: flex;
+    justify-content: center;
   }
+
+ 
