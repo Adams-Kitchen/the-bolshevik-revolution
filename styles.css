@@ -2,6 +2,8 @@ html, body {
     font-family: 'Courier New', Courier, monospace !important;
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    color: #333;
 }
 
 .banner {
@@ -30,6 +32,21 @@ html, body {
     }
 }
 
+@media (max-width: 576px) {
+    .banner {
+        height: 60vh;
+    }
+    .lenin {
+        width: 90%;
+    }
+}
+
+@media (min-width: 992px) {
+    .video {
+        gap: 40px;
+        padding: 60px;
+    }
+}
 .blurb {
     padding: 20px;
     text-align: center;
@@ -56,6 +73,59 @@ html, body {
     height: auto;
     margin-bottom: 20px;
 }
+
+.blurb h2 {
+    animation: slideInLeft 1.5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.banner h1 {
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+button:hover {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+.card:hover {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 15px red;
+    }
+}
+
 
 p {
     line-height: 1.6;
